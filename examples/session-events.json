@@ -1,0 +1,166 @@
+{
+  "schema_version": "0.1",
+  "synthetic": true,
+  "description": "虚构事件示例；不包含真实录音、真实玩家或已运行模型的输出。",
+  "audio_origin_at": "2026-09-29T19:00:00+08:00",
+  "events": [
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-001",
+      "session_id": "demo-session-001",
+      "sequence": 1,
+      "type": "session.started",
+      "occurred_at": "2026-09-29T19:00:00+08:00",
+      "received_at": "2026-09-29T19:00:00+08:00",
+      "source": "app_dm",
+      "payload": { "title": "虚构示例局", "script_name": null }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-002",
+      "session_id": "demo-session-001",
+      "sequence": 2,
+      "type": "phase.changed",
+      "occurred_at": "2026-09-29T19:01:00+08:00",
+      "received_at": "2026-09-29T19:01:00+08:00",
+      "source": "app_dm",
+      "payload": { "from": "SETUP", "to": "NIGHT", "day": 0, "night": 1, "base_phase_revision": 0, "phase_revision": 1, "reason": "manual_selection" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-003",
+      "session_id": "demo-session-001",
+      "sequence": 3,
+      "type": "phase.changed",
+      "occurred_at": "2026-09-29T19:05:00+08:00",
+      "received_at": "2026-09-29T19:05:00+08:00",
+      "source": "app_dm",
+      "payload": { "from": "NIGHT", "to": "DAWN", "day": 1, "night": 1, "base_phase_revision": 1, "phase_revision": 2, "reason": "manual_selection" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-004",
+      "session_id": "demo-session-001",
+      "sequence": 4,
+      "type": "phase.changed",
+      "occurred_at": "2026-09-29T19:06:00+08:00",
+      "received_at": "2026-09-29T19:06:00+08:00",
+      "source": "app_dm",
+      "payload": { "from": "DAWN", "to": "DISCUSSION", "day": 1, "night": 1, "base_phase_revision": 2, "phase_revision": 3, "reason": "manual_selection" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-005",
+      "session_id": "demo-session-001",
+      "sequence": 5,
+      "type": "atmosphere.estimated",
+      "occurred_at": "2026-09-29T19:07:00+08:00",
+      "received_at": "2026-09-29T19:07:02+08:00",
+      "source": "audio_model",
+      "payload": { "base_phase_revision": 3, "primary": "FOCUSED", "secondary": null, "intensity": "medium", "confidence": "medium", "status": "valid", "reason": "演示：多人持续核对公开说法。", "evidence_start_ms": 390000, "evidence_end_ms": 420000 }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-006",
+      "session_id": "demo-session-001",
+      "sequence": 6,
+      "type": "phase.changed",
+      "occurred_at": "2026-09-29T19:08:00+08:00",
+      "received_at": "2026-09-29T19:08:00+08:00",
+      "source": "app_dm",
+      "payload": { "from": "DISCUSSION", "to": "NOMINATION", "day": 1, "night": 1, "base_phase_revision": 3, "phase_revision": 4, "reason": "manual_selection" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-007",
+      "session_id": "demo-session-001",
+      "sequence": 7,
+      "type": "phase.suggested",
+      "occurred_at": "2026-09-29T19:07:59+08:00",
+      "received_at": "2026-09-29T19:08:03+08:00",
+      "source": "audio_model",
+      "payload": { "proposed_phase": "NOMINATION", "base_phase_revision": 3, "confidence": "medium", "reason": "演示：检测到开始提名的表达；接收时对应状态已过期。", "evidence_start_ms": 475000, "evidence_end_ms": 479000 }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-008",
+      "session_id": "demo-session-001",
+      "sequence": 8,
+      "type": "phase.changed",
+      "occurred_at": "2026-09-29T19:10:00+08:00",
+      "received_at": "2026-09-29T19:10:00+08:00",
+      "source": "app_dm",
+      "payload": { "from": "NOMINATION", "to": "VOTING", "day": 1, "night": 1, "base_phase_revision": 4, "phase_revision": 5, "reason": "manual_selection" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-009",
+      "session_id": "demo-session-001",
+      "sequence": 9,
+      "type": "atmosphere.overridden",
+      "occurred_at": "2026-09-29T19:10:05+08:00",
+      "received_at": "2026-09-29T19:10:05+08:00",
+      "source": "app_dm",
+      "payload": { "primary": "TENSE", "intensity": "high", "note": "演示：DM 手动标记现场悬念。" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-010",
+      "session_id": "demo-session-001",
+      "sequence": 10,
+      "type": "atmosphere.estimated",
+      "occurred_at": "2026-09-29T19:10:35+08:00",
+      "received_at": "2026-09-29T19:10:37+08:00",
+      "source": "audio_model",
+      "payload": { "base_phase_revision": 5, "primary": "EXCITED", "secondary": null, "intensity": "medium", "confidence": "medium", "status": "valid", "reason": "演示：检测到集中笑声；只归档，不覆盖人工标签。", "evidence_start_ms": 605000, "evidence_end_ms": 635000 }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-011",
+      "session_id": "demo-session-001",
+      "sequence": 11,
+      "type": "phase.changed",
+      "occurred_at": "2026-09-29T19:11:00+08:00",
+      "received_at": "2026-09-29T19:11:00+08:00",
+      "source": "app_dm",
+      "payload": { "from": "VOTING", "to": "DISCUSSION", "day": 1, "night": 1, "base_phase_revision": 5, "phase_revision": 6, "reason": "manual_selection" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-012",
+      "session_id": "demo-session-001",
+      "sequence": 12,
+      "type": "atmosphere.auto_restored",
+      "occurred_at": "2026-09-29T19:11:05+08:00",
+      "received_at": "2026-09-29T19:11:05+08:00",
+      "source": "app_dm",
+      "payload": { "reason": "DM 恢复自动识别。" }
+    },
+    {
+      "schema_version": "0.1",
+      "event_id": "evt-013",
+      "session_id": "demo-session-001",
+      "sequence": 13,
+      "type": "atmosphere.estimated",
+      "occurred_at": "2026-09-29T19:11:40+08:00",
+      "received_at": "2026-09-29T19:11:42+08:00",
+      "source": "audio_model",
+      "payload": { "base_phase_revision": 6, "primary": "FOCUSED", "secondary": null, "intensity": "medium", "confidence": "medium", "status": "valid", "reason": "演示：恢复自动后的新窗口内，讨论回到信息核对。", "evidence_start_ms": 670000, "evidence_end_ms": 700000 }
+    }
+  ],
+  "expected_projection": {
+    "phase": "DISCUSSION",
+    "phase_revision": 6,
+    "day": 1,
+    "night": 1,
+    "atmosphere_mode": "auto",
+    "effective_atmosphere": { "primary": "FOCUSED", "secondary": null, "intensity": "medium", "confidence": "medium", "source": "audio_model", "event_id": "evt-013", "updated_at": "2026-09-29T19:11:42+08:00" },
+    "pending_phase_suggestions": []
+  },
+  "expected_checkpoints": [
+    { "after_event_id": "evt-007", "phase": "NOMINATION", "pending_phase_suggestions": [], "note": "过期建议未覆盖手动阶段。" },
+    { "after_event_id": "evt-010", "atmosphere_mode": "manual", "effective_primary": "TENSE", "note": "人工氛围没有被模型覆盖。" },
+    { "after_event_id": "evt-011", "phase": "DISCUSSION", "day": 1, "atmosphere_mode": "manual", "effective_primary": "TENSE", "note": "一次投票结束后仍可继续白天讨论，人工标签保持。" },
+    { "after_event_id": "evt-012", "atmosphere_mode": "auto", "effective_atmosphere": null, "note": "恢复自动后等待新窗口，不复用旧标签。" }
+  ]
+}
